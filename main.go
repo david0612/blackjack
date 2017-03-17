@@ -7,14 +7,11 @@ import (
 )
 
 func main() {
-	var shoe Shoe
-	shoe = NewShoe(6, "name")
 	
-	for _, deck := range shoe.Decks {
-		for _, card := range deck.Cards {
-			fmt.Println(card.String())
-		}
+	shoe := NewSortableShoe(6)
+	for _, card := range shoe{
+		fmt.Println(card)
 	}
 
-time.Sleep(10000 * time.Millisecond)
+	time.Sleep(5000 * time.Millisecond)
 }

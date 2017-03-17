@@ -45,6 +45,20 @@ type Card struct {
 	Position int
 }
 
+type SortableCards []Card
+
+func (c SortableCards) Len() int{
+	return len(c)
+}
+
+func (c SortableCards) Swap(i,j int){
+	c[i], c[j] = c[j], c[i]
+}
+
+func (c SortableCards) Less(i,j int) bool{
+	return c[i].Position < c[j].Position
+}
+
 func (card Card) String() string {
 	return fmt.Sprintf("%s%c\t%d\t%d", card.Symbol, card.Suit, card.Value, card.Position)
 }

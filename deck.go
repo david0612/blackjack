@@ -3,7 +3,7 @@ package main
 import ()
 
 type Deck struct {
-	Cards []Card
+	Cards SortableCards
 }
 
 func generateSuit(suit rune, deck Deck) Deck {
