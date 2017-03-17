@@ -9,9 +9,9 @@ import (
 func main() {
 	
 	shoe := NewSortableShoe(6)
-	for _, card := range shoe{
-		fmt.Println(card)
-	}
+	shuffleCard := len(shoe) * ShuffleCard / 100
+	
+	
 
 	time.Sleep(5000 * time.Millisecond)
 }
